@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #0648A0;
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+}
+
+.container {
+	background-color: #fff;
+	-webkit-border-radius:10px; /* Chrome 4.0 and Safari 3.1 */
+	-moz-border-radius:10px; /* Mozilla 3.0 */
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	width: 400px;
+	max-width: 100%;
+}
+
+.header {
+	border-bottom: 1px solid #f0f0f0;
+	background-color: #0B60D4;
+	padding: 20px 40px;
+}
+
+.header h2 {
+	margin: 0;
+	text-align: center;
+	color: #FFF;
+}
+
+.form {
+	padding: 30px 40px;	
+}
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	border: 2px solid #aaa;
+	-webkit-border-radius:4px; /* Chrome 4.0 and Safari 3.1 */
+	-moz-border-radius:4px; /* Mozilla 3.0 */
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 40px;
+	right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form button {
+	background-color: #0B60D4;
+	border: 2px solid #0B60D4;
+	-webkit-border-radius:4px; /* Chrome 4.0 and Safari 3.1 */
+	-moz-border-radius:4px; /* Mozilla 3.0 */
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+	cursor: pointer;
+	outline: none;
+	-webkit-transition:background 500ms; /* Chrome 4.0 and Safari 3.1 */
+    -moz-transition:background 500ms;  /* Mozilla 4.0 */
+	transition:background 500ms;
+}
+.form button:hover {
+	background: #043981;
+	border: 2px solid #043981;
+}
+.form button:active {
+	background: #032B62;
+	border: 2px solid #032B62;
+}
+
+
+
+
+
+
+
+
+/* SOCIAL PANEL CSS */
+.social-panel-container {
+	position: fixed;
+	right: 0;
+	bottom: 80px;
+	-webkit-transform: translateX(100%); /* Chrome 4.0, Safari 3.2 and Opera 15.0 */
+	-moz-transform: translateX(100%);  /* Mozilla 3.5 */
+	-ms-transform: translateX(100%); /* IE 9 */
+	-o-transform: translateX(100%); /* opera 10.5 */
+	transform: translateX(100%);
+	-webkit-transition: transform 0.4s ease-in-out; /* Chrome 4.0 and Safari 3.1 */
+    -moz-transition: transform 0.4s ease-in-out;  /* Mozilla 4.0 */
+	transition: transform 0.4s ease-in-out;
+}
+
+.social-panel-container.visible {
+	-webkit-transform:translate(-10%); /* Chrome 4.0, Safari 3.2 and Opera 15.0 */
+	-moz-transform:translate(-10%);  /* Mozilla 3.5 */
+	-ms-transform:translate(-10%); /* IE 9 */
+	-o-transform:translate(-10%); /* opera 10.5 */
+	transform: translateX(-10px);
+}
+
+.social-panel {	
+	background-color: #fff;
+	-webkit-border-radius:16px; /* Chrome 4.0 and Safari 3.1 */
+	-moz-border-radius:16px; /* Mozilla 3.0 */
+	border-radius: 16px;
+	box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
+	border: 5px solid #001F61;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Muli';
+	position: relative;
+	height: 169px;	
+	width: 370px;
+	max-width: calc(100% - 10px);
+}
+
+.social-panel button.close-btn {
+	border: 0;
+	color: #ccc;
+	background: #0B60D4;
+	cursor: pointer;
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	outline: none;
+}
+.social-panel button.close-btn:hover {
+	background: #043981;
+	color: #DDD;
+}
+.social-panel button.close-btn:active {
+	background: #032B62;
+	color: #FFF;
+}
+/*.social-panel button.close-btn:focus {
+	
+}*/
+
+.social-panel p {
+	background-color: #032B62;
+	-webkit-border-radius: 0 0 10px 10px; /* Chrome 4.0 and Safari 3.1 */
+	-moz-border-radius: 0 0 10px 10px; /* Mozilla 3.0 */
+	border-radius: 0 0 10px 10px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 2px 17px 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin: 0;
+	-webkit-transform: translateX(-50%); /* Chrome 4.0, Safari 3.2 and Opera 15.0 */
+	-moz-transform: translateX(-50%);  /* Mozilla 3.5 */
+	-ms-transform: translateX(-50%); /* IE 9 */
+	-o-transform: translateX(-50%); /* opera 10.5 */
+	transform: translateX(-50%);
+	text-align: center;
+	width: 235px;
+}
+
+.social-panel p i {
+	margin: 0 5px;
+	color: #e84e1b;
+}
+
+.social-panel p a {
+	color: #e84e1b;
+	text-decoration: none;
+}
+
+.social-panel h4 {
+	margin: 20px 0;
+	color: #0B60D4;
+	font-family: 'Muli';	
+	font-size: 14px;	
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.social-panel ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social-panel ul li {
+	margin: 0 10px;
+}
+
+.social-panel ul li a {
+	border: 1px solid #0B60D4;
+	-webkit-border-radius: 50%; /* Chrome 4.0 and Safari 3.1 */
+	-moz-border-radius: 50%; /* Mozilla 3.0 */
+	border-radius: 50%;
+	color: #0B60D4;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+	text-decoration: none;
+}
+
+.social-panel ul li a:hover {
+	border-color: #043981;
+	color: #043981;
+	box-shadow: 0 9px 12px -9px #043981;
+}
+
+.floating-btn {
+	-webkit-border-radius: 26.5px; /* Chrome 4.0 and Safari 3.1 */
+	-moz-border-radius: 26.5px; /* Mozilla 3.0 */
+	border-radius: 26.5px;
+	background-color: #032B62;
+	border: 1px solid #032B62;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 20px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999;
+}
+
+.floating-btn:hover {
+	background-color: #fff;
+	color: #001F61;
+}
+
+.floating-btn:focus {
+	outline: none;
+}
+
+@media screen and (max-width: 480px) {
+
+	.social-panel-container.visible {
+			-webkit-transform: translateX(0px); /* Chrome 4.0, Safari 3.2 and Opera 15.0 */
+		-moz-transform: translateX(0px);  /* Mozilla 3.5 */
+		-ms-transform: translateX(0px); /* IE 9 */
+		-o-transform: translateX(0px); /* opera 10.5 */
+		transform: translateX(0px);
+	}
+	
+	.floating-btn {
+		right: 10px;
+	}
+}
