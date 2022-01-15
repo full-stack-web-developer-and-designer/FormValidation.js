@@ -134,14 +134,6 @@ body {
 	background: #032B62;
 	border: 2px solid #032B62;
 }
-
-
-
-
-
-
-
-
 /* SOCIAL PANEL CSS */
 .social-panel-container {
 	position: fixed;
@@ -202,10 +194,6 @@ body {
 	background: #032B62;
 	color: #FFF;
 }
-/*.social-panel button.close-btn:focus {
-	
-}*/
-
 .social-panel p {
 	background-color: #032B62;
 	-webkit-border-radius: 0 0 10px 10px; /* Chrome 4.0 and Safari 3.1 */
@@ -305,7 +293,11 @@ body {
 .floating-btn:focus {
 	outline: none;
 }
-
+@media screen and (max-width: 768px) {
+	.container {
+		width: 90%;
+	}
+}
 @media screen and (max-width: 480px) {
 
 	.social-panel-container.visible {
